@@ -151,7 +151,7 @@
 
 /* Each slide keeps the matching before/after screens together. Original assets stay intact. */
 .comparison-carousel{margin:32px 0}
-.comparison-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.comparison-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:20px}
 .comparison-controls[hidden],.comparison-slide[hidden]{display:none}
 .comparison-controls button{min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
 .comparison-controls button[aria-disabled=true]{color:var(--secondary);opacity:.45;cursor:default}
@@ -168,7 +168,7 @@
 .comparison-figure figcaption{margin:12px 0 0;color:var(--secondary);font-size:14px;line-height:1.7;word-break:keep-all}
 .comparison-slide+.comparison-slide{margin-top:32px}
 .comparison-slide[hidden]+.comparison-slide{margin-top:0}
-@media(max-width:600px){.comparison-pair{grid-template-columns:1fr;gap:24px}.comparison-controls{margin-bottom:16px}}
+@media(max-width:600px){.comparison-pair{grid-template-columns:1fr;gap:24px}.comparison-controls{margin-top:16px}}
 @media print{.comparison-controls{display:none}.comparison-slide[hidden]{display:block}}
 
 .article-section .article-report .evidence img{width:100%;max-width:520px;height:auto;max-height:none;margin:0 auto}
