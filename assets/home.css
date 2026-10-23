@@ -60,3 +60,32 @@
 @media(max-width:760px){.home-section{padding-bottom:56px}.home-intro{padding-top:40px}.intro-layout{grid-template-columns:1fr;gap:40px}.career-timeline{max-width:520px;width:100%}.career-timeline h2{font-size:22px}.section-title{font-size:28px;margin-bottom:24px}.intro-section-title{font-size:16px;margin-bottom:20px}.project-gallery{grid-template-columns:1fr;gap:52px}.project-card h3{min-height:0;font-size:22px}.project-cover figcaption{min-height:0}.project-tags{margin-top:8px}.work-caption{margin-bottom:28px}.practice-list{gap:24px}.practice-item h3{font-size:21px}.home-section:not(.home-intro)>.wrap{padding-top:24px}}
 @media(max-width:440px){.career-era-foundation li{flex-wrap:wrap}}
 @media print{.home-intro{padding-top:0}.home-section{padding-bottom:32px}.project-card{break-inside:avoid}.project-gallery{grid-template-columns:1fr 1fr}.intro-layout{display:block}.career-timeline{margin-top:24px}}
+
+
+/* Introduction and project summaries, approved 2026-10-23. */
+.intro-kicker{font-size:16px;font-weight:500;color:var(--secondary);margin-bottom:18px}
+.intro-identity{font-size:28px;font-weight:600;line-height:1.55;letter-spacing:-.03em;text-wrap:pretty;margin-bottom:28px}
+.intro-narrative-section+.intro-narrative-section{margin-top:26px}
+.intro-narrative .intro-subheading{font-size:18px;font-weight:550;line-height:1.65;letter-spacing:-.015em;color:var(--ink);margin-bottom:10px}
+.intro-narrative p+p{margin-top:12px}
+.career-earlier{margin-top:4px;border-top:1px solid var(--line);padding-top:14px}
+.career-earlier>summary{cursor:pointer;font-size:14px;font-weight:500;color:var(--secondary);padding:8px 0;min-height:44px}
+.career-earlier>summary:hover{color:var(--accent)}
+.career-earlier[open]>summary{margin-bottom:12px}
+.career-earlier .career-era-foundation{padding-top:0}
+.project-thumbnail::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(12,19,28,.32) 0%,rgba(12,19,28,.38) 40%,rgba(12,19,28,.84) 100%);opacity:0;transition:opacity 180ms ease;pointer-events:none}
+.project-summary{position:absolute;z-index:2;inset:auto 24px 22px;color:#fff;font-size:16px;line-height:1.65;font-weight:500;opacity:0;transform:translateY(5px);transition:opacity 180ms ease,transform 180ms ease;pointer-events:none}
+.project-summary-mobile{display:none}
+.project-card-link:focus-visible .project-thumbnail::after,.project-card-link:focus-visible .project-summary{opacity:1}
+.project-card-link:focus-visible .project-summary{transform:none}
+.project-card-link:focus-visible{outline:2px solid var(--accent);outline-offset:7px}
+@media(hover:hover) and (pointer:fine){
+  .project-card-link:hover .project-thumbnail::after,.project-card-link:hover .project-summary{opacity:1}
+  .project-card-link:hover .project-summary{transform:none}
+}
+@media(max-width:760px),(hover:none),(pointer:coarse){
+  .project-thumbnail::after,.project-summary{display:none}
+  .project-summary-mobile{display:block;margin-top:12px;color:var(--secondary);font-size:15px;line-height:1.75;font-weight:400}
+}
+@media(max-width:760px){.intro-identity{font-size:25px;line-height:1.55;margin-bottom:26px}.intro-narrative .intro-subheading{font-size:17px}.intro-narrative-section+.intro-narrative-section{margin-top:24px}.intro-kicker{margin-bottom:16px}.career-earlier{margin-top:0}}
+@media print{.project-thumbnail::after,.project-summary{display:none}.project-summary-mobile{display:block;color:#000;margin-top:12px}}
