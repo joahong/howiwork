@@ -8,7 +8,7 @@
 
 .intro-metrics{margin:0 0 30px;max-width:660px}
 .intro-metrics-heading{font-size:15px;font-weight:650;letter-spacing:.02em;color:var(--secondary);margin:0 0 12px}
-.metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;border:1px solid var(--line);border-radius:4px;background:var(--line);overflow:hidden}
+.metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:0;padding:0;list-style:none;border:1px solid var(--line);border-radius:4px;background:var(--line);overflow:hidden}
 .metric{background:#fff;padding:16px 18px 18px}
 .metric-value{display:block;font-size:25px;font-weight:650;line-height:1.25;letter-spacing:-.03em;color:var(--accent);font-variant-numeric:tabular-nums}
 .metric-label{display:block;margin-top:8px;font-size:14px;line-height:1.6;font-weight:500;color:var(--ink)}
