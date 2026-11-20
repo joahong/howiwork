@@ -178,3 +178,8 @@
 .article-section .article-cards .evidence{min-width:0}
 .article-section .article-cards .evidence img{width:100%;height:auto;max-height:none;border:0;background:transparent}
 @media(max-width:600px){.article-section .article-cards{grid-template-columns:1fr;gap:16px}}
+
+/* Overview result items as a short list for scannability. */
+.project-overview dd ul{margin:0;padding-left:1.15em;list-style:disc}
+.project-overview dd li{margin:0}
+.project-overview dd li::marker{color:var(--secondary)}
