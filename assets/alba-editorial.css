@@ -1,0 +1,127 @@
+/* Alba only: source evidence, prompt responsibilities and consent flow. */
+.alba-source-context{display:block;font-size:13px;line-height:1.7;color:#64748b}
+.article-section .article-alba-comparison{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
+.article-alba-comparison .evidence img{height:auto;max-height:350px;object-fit:contain;background:white}
+.article-section .article-alba-handoff{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;max-width:650px;margin-inline:auto}
+.article-alba-handoff .evidence img{width:auto;max-width:100%;height:auto;max-height:560px;margin-inline:auto}
+.article-section .article-alba-workflow .evidence img{height:auto;max-height:620px;width:auto;max-width:100%;margin-inline:auto;object-fit:contain}
+.alba-prompt-map{display:grid;grid-template-columns:1fr 1fr;gap:0;border-block:1px solid #dbe3ea;margin:30px 0 10px}
+.alba-prompt-map>span{display:block;padding:22px 24px 22px 0}
+.alba-prompt-map>span:nth-child(even){padding-left:24px;border-left:1px solid #dbe3ea}
+.alba-prompt-map>span:nth-child(n+3){border-top:1px solid #dbe3ea}
+.alba-prompt-map strong{display:block;font-size:17px;font-weight:600;color:#245ea8;margin-bottom:8px}
+.alba-prompt-map span span{display:block;font-size:15px;line-height:1.8;color:#374151}
+@media(max-width:600px){
+.article-section .article-alba-comparison,.article-section .article-alba-handoff{grid-template-columns:1fr;gap:30px}
+.article-alba-handoff .evidence img{max-height:530px}
+.alba-prompt-map{grid-template-columns:1fr}
+.alba-prompt-map>span,.alba-prompt-map>span:nth-child(even){padding:18px 0;border-left:0}
+.alba-prompt-map>span+span{border-top:1px solid #dbe3ea}
+}
+/* Complete evidence screenshots, without cropping. */
+.article-section .article-alba-comparison{display:flex;flex-direction:column;gap:32px;max-width:800px;margin:30px auto}
+.article-alba-comparison .evidence{width:100%;margin:0}
+.article-alba-comparison .evidence img{width:100%;height:auto;max-height:none;object-fit:contain;border:1px solid #e4e7eb;border-radius:4px}
+.article-alba-comparison .evidence:last-child{max-width:660px}
+.alba-flow{display:flex;flex-direction:column;align-items:center;padding:32px 24px;background:#f7f9fb;border:1px solid #dce3eb;border-radius:8px;margin:32px 0 12px;font-size:15px;line-height:1.6;color:#263345}
+.alba-flow span{box-sizing:border-box}
+.af-start{padding:9px 26px;border:1px solid #8b9cb0;border-radius:30px;background:white;font-weight:600}
+.af-arrow{display:block;color:#7a8b9f;font-size:22px;line-height:1.5;text-align:center}
+.af-check,.af-node{display:block;background:white;border:1px solid #cbd6e2;padding:16px 20px;border-radius:5px;text-align:center}
+.af-check strong,.af-check>span,.af-node strong,.af-node>span{display:block}
+.af-check>span,.af-node>span{font-size:13px;color:#58687a;margin-top:5px}
+.af-aside{display:block;font-size:12px;color:#65758a;text-align:center;margin:7px 0 0}
+.af-decision{padding:15px 20px;background:#eaf0f8;border:1px solid #b8cbe1;color:#204f87;font-weight:600;text-align:center;border-radius:5px;width:100%;max-width:470px}
+.af-branches{display:grid;grid-template-columns:1fr 1.3fr;gap:32px;width:100%;margin-top:22px}
+.af-branch{display:flex;flex-direction:column;align-items:stretch;border-top:1px solid #a7b8cc;padding-top:12px}
+.af-label{display:block;font-size:13px;text-align:center;color:#526882;margin-bottom:12px}
+.af-save{border-color:#98b4d6;background:#f0f5fb}
+.alba-visual-caption{display:block;text-align:center;color:#75808e;font-size:12px;line-height:1.7}
+@media(max-width:600px){.alba-flow{padding:22px 14px}.af-branches{grid-template-columns:1fr;gap:24px}.af-check,.af-node{padding:14px 12px}.af-decision{font-size:14px}.article-section .article-alba-comparison{gap:24px}}
+/* Curated evidence needs enough width for the conversation to remain readable. */
+#boundaries .article-figures,#handoff .article-figures,#quality .article-figures{max-width:780px;width:100%}
+#boundaries .article-figures .evidence,#handoff .article-figures .evidence,#quality .article-figures .evidence{width:100%;max-width:none}
+#boundaries .article-figures img,#handoff .article-figures img,#quality .article-figures img{width:100%;max-width:none;max-height:none;height:auto}
+
+
+/* Wide overview rows for decisions and outcomes. */
+.project-overview>dl>div:nth-child(n+3){grid-column:1 / -1}
+
+
+
+
+/* Evidence is laid out as separate source screens, with labels outside the images. */
+#handoff .article-figures{display:grid;grid-template-columns:repeat(2,minmax(0,310px));gap:40px;align-items:start;justify-content:center;margin:32px auto}
+#handoff .article-figures .evidence{margin:0;max-width:310px}
+#handoff .article-figures img{border:1px solid #e1e5eb;border-radius:8px;width:100%;height:auto;background:#fff}
+#handoff .article-figures figcaption,#quality .article-figures figcaption,#outcome .article-figures figcaption{font-size:13px;line-height:1.6;color:#687382;text-align:center;margin:10px 0 0}
+#quality .article-figures{display:flex;flex-direction:column;gap:24px;max-width:674px;margin:30px auto;padding:0}
+#quality .article-figures .evidence{display:flex;flex-direction:column;margin:0;padding:0;border:0}
+#quality .article-figures img{width:100%;border:1px solid #e1e5eb;border-radius:0;background:#fff}
+#quality .article-figures figcaption{margin:8px 0 0}
+#outcome .article-figures{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:32px;align-items:start}
+#outcome .article-figures .evidence{width:100%;margin:0}
+#outcome .article-figures img{width:100%;height:auto;max-height:none;max-width:none;background:transparent}
+@media(max-width:600px){
+ #handoff .article-figures{grid-template-columns:minmax(0,310px);gap:30px}
+ #quality .article-figures{gap:22px}
+ #outcome .article-figures{grid-template-columns:minmax(0,340px);justify-content:center;gap:28px}
+}
+
+.alba-evaluation-text{display:none}
+@media(max-width:600px){
+ #quality .article-figures{display:none}
+ .alba-evaluation-text{display:block;margin:28px 0 0;border-block:1px solid #e1e5eb}
+ .ae-record{display:block;padding:20px 0}
+ .ae-record+.ae-record{border-top:1px solid #e1e5eb}
+ .ae-record>strong,.ae-record>span{display:block}
+ .ae-record>strong{font-size:14px;color:#687382;font-weight:500;margin-bottom:10px}
+ .ae-record>span{font-size:15px;line-height:1.8}
+ .ae-record code{font-size:13px;overflow-wrap:anywhere;color:#374151}
+ .ae-record .ae-score{font-size:13px;color:#687382;margin-top:8px}
+}
+
+#quality .article-figures{max-width:780px}
+#outcome .article-figures img{border:0}
+
+/* Latest supplied 2x artwork, matched chat height without stretching. */
+#handoff .article-figures{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:680px}
+#handoff .article-figures .evidence{max-width:none;width:100%}
+#handoff .article-figures img{height:640px;width:auto;max-width:100%;object-fit:contain;margin-inline:auto;display:block}
+#quality .article-figures{display:block;max-width:620px}
+.article-hero-evidence{margin:28px 0 38px}
+.article-hero-images{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.article-hero-images .evidence{margin:0;width:100%}
+.article-hero-images img{width:100%;height:auto;max-height:none;border:0;display:block}
+.article-hero-evidence>.article-caption{font-size:13px;color:#687382;text-align:center;margin:10px 0 0}
+@media(max-width:600px){
+ #handoff .article-figures{grid-template-columns:1fr}
+ #handoff .article-figures img{height:600px;width:auto;max-width:100%}
+ #quality .article-figures{display:block}
+ .article-hero-images{grid-template-columns:1fr;gap:16px;max-width:340px;margin-inline:auto}
+}
+
+/* Three complete document pages; two readable service introduction panels. */
+#quality .article-figures{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:780px;align-items:start;margin-bottom:10px}
+#quality .article-figures .evidence{width:100%;max-width:none;margin:0}
+#quality .article-figures img{width:100%;height:auto;max-height:none;display:block}
+#outcome .article-figures{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:820px;margin:30px auto 10px;padding:0}
+#outcome .article-figures img{border:0;border-radius:0;display:block}
+#quality .article-caption,#outcome .article-caption{text-align:center;color:#687382;font-size:13px;margin:8px 0 30px}
+@media(max-width:600px){
+ #quality .article-figures{grid-template-columns:minmax(0,290px);justify-content:center;gap:18px}
+ #outcome .article-figures{grid-template-columns:minmax(0,380px);justify-content:center;gap:20px}
+}
+
+/* Two distinct conversation groups, with a shared caption for jobseekers. */
+#handoff .article-alba-handoff{grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:36px;max-width:900px;align-items:start}
+#handoff .article-alba-handoff .evidence{padding:14px;background:#f5f7f9;border:1px solid #e1e5eb;border-radius:12px;box-sizing:border-box}
+#handoff .alba-seeker-screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start}
+#handoff .article-alba-handoff img{width:100%;height:auto;max-height:none;object-fit:contain;border:0;border-radius:4px}
+#handoff .article-alba-handoff figcaption{margin:14px 0 0}
+@media(max-width:600px){
+ #handoff .article-alba-handoff{grid-template-columns:minmax(0,1fr);gap:24px}
+ #handoff .article-alba-handoff .alba-employer-group{width:52%;min-width:180px;justify-self:center}
+ #handoff .article-alba-handoff .evidence{padding:10px}
+ #handoff .alba-seeker-screens{gap:8px}
+}
